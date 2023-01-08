@@ -12,8 +12,7 @@ const SnapProvider = ({ children }) => {
 
   return (
     <SnapContext.Provider value={providerValue}>
-      {" "}
-      {children}{" "}
+      {children}
     </SnapContext.Provider>
   );
 };

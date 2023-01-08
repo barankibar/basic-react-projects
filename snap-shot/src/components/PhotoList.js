@@ -16,27 +16,29 @@ const PhotoList = () => {
         });
     }
   }, [search]);
-
   return (
     <div className="row">
       {data.map((e, index) => {
         return (
-            <div className="card col-md-12" key={index}>
-              <img
-                className="card-img-top"
-                src={e.links.download}
-                alt="Card image cap"
-              />
-              <div className="card-body">
-                <h5 className="card-title">{e.tags.map((el) => el.title)}</h5>
-                <div className="card-text" key={e.id}>
-                  {e.alt_description}
-                </div>
-                <a href={e.user.links.portfolio} className="btn btn-primary user-btn">
-                  {e.user.first_name} {e.user.last_name}
-                </a>
+          <div className="card col-md-12" key={index}>
+            <img
+              className="card-img-top"
+              src={e.links.download}
+              alt="Card image cap"
+            />
+            <div className="card-body">
+              <h5 className="card-title">{e.tags.map((el) => el.title)}</h5>
+              <div className="card-text" key={e.id}>
+                {e.alt_description}
               </div>
+              <a
+                href={`/user/${e.user.username}`}
+                className="btn btn-primary user-btn"
+              >
+                {e.user.first_name} {e.user.last_name}
+              </a>
             </div>
+          </div>
         );
       })}
     </div>
