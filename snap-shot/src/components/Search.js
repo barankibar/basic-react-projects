@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { SnapContext } from "../context/SnapContext";
 
 const Search = () => {
     const {search, setSearch} = useContext(SnapContext);
 
     return (
-        <input name="snap" value={search} onChange={e => setSearch(e.target.value)} />
+        <input className="search-form" name="snap" value={search} onChange={e => setSearch(e.target.value)} />
     );
 }
 

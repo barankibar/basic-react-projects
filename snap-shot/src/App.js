@@ -6,10 +6,12 @@ import SnapProvider from "./context/SnapContext";
 
 function App() {
   return (
-    <div> 
+    <div>
       <SnapProvider>
-        <h1>SnapShot</h1>
-        <Search />
+        <header id="header">
+          <h1>SnapShot</h1>
+          <Search />
+        </header>
         <PhotoList />
       </SnapProvider>
     </div>
